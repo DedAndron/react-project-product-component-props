@@ -1,8 +1,9 @@
-import product from "./Product.tsx";
+import type {ProductType} from "../types/ProductType.ts";
 
-const AddToCart=()=>{
-    const cart = JSON.parse(localStorage.getItem("cart") ?? "[]");
+const AddToCart = (product: ProductType) => {
+    const cart: ProductType[] = JSON.parse(localStorage.getItem("cart") ?? "[]");
     cart.push(product);
-    localStorage.setItem("cart",JSON.stringify(cart));
+    localStorage.setItem("cart", JSON.stringify(cart));
 }
+
 export default AddToCart;

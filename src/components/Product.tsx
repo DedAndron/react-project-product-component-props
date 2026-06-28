@@ -52,10 +52,10 @@ const Product = (prop:{product:ProductType})=>{
         {price} ₴
       </span>
 
-                    <button className="w-full sm:w-auto px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 active:scale-95 transition" onClick={AddToCart}>
+                    <button className="w-full sm:w-auto px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 active:scale-95 transition" onClick={() => AddToCart(prop.product)}>
                         🛒
                     </button>
-                    <button className="w-full sm:w-auto px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-50 active:scale-95 transition" onClick={AddToFav}>
+                    <button className="w-full sm:w-auto px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-50 active:scale-95 transition" onClick={() => AddToFav(prop.product)}>
                         ❤
                     </button>
                 </div>
